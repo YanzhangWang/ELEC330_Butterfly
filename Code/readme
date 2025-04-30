@@ -1,1 +1,46 @@
+Follow these instructions to launch the simulation:
 
+
+MAIN METHOD
+
+1. Download/pull the code from GitHub to your Linux PC's home directory. 
+
+e.g., "home/butterfly/" or "home/user/"
+
+2. Open a terminal and cd into the butterflybot file.
+
+cd butterflybot
+
+3. Build the files
+
+colcon Build
+
+4. Source the workspace
+
+source install/setup.bash
+
+5. Launch the simulation
+
+ros2 launch butterflybot launch.py
+
+
+
+ALTERNATIVE METHOD
+
+1. Download/pull the code from GitHub to your Linux PC's home directory. 
+
+e.g., "home/butterfly/" or "home/user/"
+
+2. Open a terminal and cd into the butterflybot scripts file. 
+
+cd butterflybot/scripts
+
+3. Open a Terminal and give the butterflybot.sh script excecute permissions *:
+
+chmod +x butterflybot.sh
+
+* This step is only useful during the first launch. You can skip it during future launches.
+
+4. Run the script with:
+
+./butterflybot.sh
