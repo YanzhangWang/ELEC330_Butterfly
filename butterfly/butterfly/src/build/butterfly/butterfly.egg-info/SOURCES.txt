@@ -1,0 +1,70 @@
+package.xml
+setup.cfg
+setup.py
+build/butterfly/butterfly.egg-info/PKG-INFO
+build/butterfly/butterfly.egg-info/SOURCES.txt
+build/butterfly/butterfly.egg-info/dependency_links.txt
+build/butterfly/butterfly.egg-info/entry_points.txt
+build/butterfly/butterfly.egg-info/requires.txt
+build/butterfly/butterfly.egg-info/top_level.txt
+build/butterfly/butterfly.egg-info/zip-safe
+butterfly/__init__.py
+butterfly/joint_controller.py
+butterfly/transform_broadcaster.py
+launch/launch.py
+meshes/collision/5X4.7 CL.STL
+meshes/collision/Propeller Ring for Qdrone.STL
+meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-1.STL
+meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-2.STL
+meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-3.STL
+meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-4.STL
+meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-1.STL
+meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-2.STL
+meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-3.STL
+meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-4.STL
+meshes/collision/Quad drone Assemb(revised) - Quad drone Main bracket - CL-1.STL
+meshes/collision/Quad drone Assemb(revised) - Quad drone Main bracket - CL-2.STL
+meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-1.STL
+meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-2.STL
+meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-3.STL
+meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-4.STL
+meshes/collision/Quad drone Assemb(revised) - wing-3.STL
+meshes/collision/Quad drone Assemb(revised) - wing-4.STL
+meshes/collision/Quad drone Main bracket - CL.STL
+meshes/collision/Quaddrone Arm.STL
+meshes/collision/wing.SLDPRT
+meshes/collision/wing.STL
+meshes/visual/5X4.7 CL.STL
+meshes/visual/Arch.STL
+meshes/visual/PineTree.STL
+meshes/visual/Propeller Ring for Qdrone.STL
+meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-1.STL
+meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-2.STL
+meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-3.STL
+meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-4.STL
+meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-1.STL
+meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-2.STL
+meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-3.STL
+meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-4.STL
+meshes/visual/Quad drone Assemb(revised) - Quad drone Main bracket - CL-1.STL
+meshes/visual/Quad drone Assemb(revised) - Quad drone Main bracket - CL-2.STL
+meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-1.STL
+meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-2.STL
+meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-3.STL
+meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-4.STL
+meshes/visual/Quad drone Assemb(revised) - wing-3.STL
+meshes/visual/Quad drone Assemb(revised) - wing-4.STL
+meshes/visual/Quad drone Main bracket - CL.STL
+meshes/visual/Quaddrone Arm.STL
+meshes/visual/Rock_horizontal_1.STL
+meshes/visual/Rock_vertical_1.STL
+meshes/visual/wing.SLDPRT
+meshes/visual/wing.STL
+resource/butterfly
+rviz/butterfly.rviz
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+urdf/butterfly.sdf
+urdf/butterfly.urdf
+urdf/env_ws.sdf

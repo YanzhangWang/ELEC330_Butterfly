@@ -1,0 +1,99 @@
+[1.150s] Invoking command in '/home/butterfly/butterfly/src': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/butterfly/butterfly/src/build/butterfly/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/butterfly build --build-base /home/butterfly/butterfly/src/build/butterfly/build install --record /home/butterfly/butterfly/src/build/butterfly/install.log --single-version-externally-managed install_data
+[1.443s] running egg_info
+[1.443s] creating build/butterfly/butterfly.egg-info
+[1.465s] writing build/butterfly/butterfly.egg-info/PKG-INFO
+[1.466s] writing dependency_links to build/butterfly/butterfly.egg-info/dependency_links.txt
+[1.466s] writing entry points to build/butterfly/butterfly.egg-info/entry_points.txt
+[1.466s] writing requirements to build/butterfly/butterfly.egg-info/requires.txt
+[1.466s] writing top-level names to build/butterfly/butterfly.egg-info/top_level.txt
+[1.466s] writing manifest file 'build/butterfly/butterfly.egg-info/SOURCES.txt'
+[1.513s] reading manifest file 'build/butterfly/butterfly.egg-info/SOURCES.txt'
+[1.514s] writing manifest file 'build/butterfly/butterfly.egg-info/SOURCES.txt'
+[1.514s] running build
+[1.515s] running build_py
+[1.515s] creating /home/butterfly/butterfly/src/build/butterfly/build
+[1.515s] creating /home/butterfly/butterfly/src/build/butterfly/build/lib
+[1.515s] creating /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+[1.515s] copying butterfly/transform_broadcaster.py -> /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+[1.516s] copying butterfly/__init__.py -> /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+[1.516s] copying butterfly/joint_controller.py -> /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+[1.517s] running install
+[1.523s] running install_lib
+[1.546s] creating /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+[1.546s] copying /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly/transform_broadcaster.py -> /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+[1.546s] copying /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly/__init__.py -> /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+[1.547s] copying /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly/joint_controller.py -> /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+[1.547s] byte-compiling /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly/transform_broadcaster.py to transform_broadcaster.cpython-312.pyc
+[1.547s] byte-compiling /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly/__init__.py to __init__.cpython-312.pyc
+[1.548s] byte-compiling /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly/joint_controller.py to joint_controller.cpython-312.pyc
+[1.549s] running install_data
+[1.549s] creating /home/butterfly/butterfly/src/install/butterfly/share/ament_index
+[1.549s] creating /home/butterfly/butterfly/src/install/butterfly/share/ament_index/resource_index
+[1.549s] creating /home/butterfly/butterfly/src/install/butterfly/share/ament_index/resource_index/packages
+[1.549s] copying resource/butterfly -> /home/butterfly/butterfly/src/install/butterfly/share/ament_index/resource_index/packages
+[1.549s] copying package.xml -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly
+[1.549s] copying launch/launch.py -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly
+[1.550s] creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf
+[1.550s] copying urdf/env_ws.sdf -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf/
+[1.550s] copying urdf/butterfly.urdf -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf/
+[1.550s] copying urdf/butterfly.sdf -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf/
+[1.551s] creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/rviz
+[1.551s] copying rviz/butterfly.rviz -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/rviz/
+[1.551s] creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes
+[1.551s] creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision
+[1.551s] copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.553s] copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.554s] copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.555s] copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.557s] copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.557s] copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.558s] copying meshes/collision/Propeller Ring for Qdrone.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.558s] copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.558s] copying meshes/collision/wing.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.559s] copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.561s] copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.561s] copying meshes/collision/Quaddrone Arm.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.563s] copying meshes/collision/Quad drone Assemb(revised) - Quad drone Main bracket - CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.564s] copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.564s] copying meshes/collision/Quad drone Assemb(revised) - wing-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.564s] copying meshes/collision/wing.SLDPRT -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.565s] copying meshes/collision/Quad drone Assemb(revised) - Quad drone Main bracket - CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.566s] copying meshes/collision/Quad drone Assemb(revised) - wing-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.566s] copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.567s] copying meshes/collision/5X4.7 CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.569s] copying meshes/collision/Quad drone Main bracket - CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.570s] copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+[1.571s] creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual
+[1.571s] copying meshes/visual/Rock_vertical_1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.571s] copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.573s] copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.576s] copying meshes/visual/PineTree.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.577s] copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.578s] copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.580s] copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.581s] copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.582s] copying meshes/visual/Propeller Ring for Qdrone.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.582s] copying meshes/visual/Rock_horizontal_1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.582s] copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.583s] copying meshes/visual/wing.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.583s] copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.585s] copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.586s] copying meshes/visual/Quaddrone Arm.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.587s] copying meshes/visual/Quad drone Assemb(revised) - Quad drone Main bracket - CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.588s] copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.588s] copying meshes/visual/Quad drone Assemb(revised) - wing-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.589s] copying meshes/visual/wing.SLDPRT -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.589s] copying meshes/visual/Quad drone Assemb(revised) - Quad drone Main bracket - CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.590s] copying meshes/visual/Quad drone Assemb(revised) - wing-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.591s] copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.592s] copying meshes/visual/5X4.7 CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.594s] copying meshes/visual/Arch.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.595s] copying meshes/visual/Quad drone Main bracket - CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.596s] copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+[1.597s] running install_egg_info
+[1.622s] Copying build/butterfly/butterfly.egg-info to /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly-0.0.0-py3.12.egg-info
+[1.623s] running install_scripts
+[1.773s] Installing joint_controller script to /home/butterfly/butterfly/src/install/butterfly/lib/butterfly
+[1.773s] Installing transform_broadcaster script to /home/butterfly/butterfly/src/install/butterfly/lib/butterfly
+[1.774s] writing list of installed files to '/home/butterfly/butterfly/src/build/butterfly/install.log'
+[1.802s] Invoked command in '/home/butterfly/butterfly/src' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/butterfly/butterfly/src/build/butterfly/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/butterfly build --build-base /home/butterfly/butterfly/src/build/butterfly/build install --record /home/butterfly/butterfly/src/build/butterfly/install.log --single-version-externally-managed install_data
