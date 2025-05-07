@@ -1,8 +1,0 @@
-# In Terminal 1
-cd ~
-gz sim /usr/local/share/ardupilot_gazebo/worlds/iris_runway.sdf
-
-# In Terminal 2
-cd ~/ardupilot
-source ~/ardupilot_env/bin/activate
-./Tools/autotest/sim_vehicle.py -v ArduCopter -f gazebo-iris
