@@ -1,0 +1,113 @@
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import Float64
+from sensor_msgs.msg import Imu
+import math
+import time
+
+class DroneController(Node):
+    def __init__(self):
+        super().__init__('drone_controller')
+        
+        # Create thruster publishers
+        self.pub_front_left = self.create_publisher(
+            Float64, '/model/robot1/joint/front_left_prop_joint/cmd_thrust', 10)
+        self.pub_front_right = self.create_publisher(
+            Float64, '/model/robot1/joint/front_right_prop_joint/cmd_thrust', 10)
+        self.pub_rear_left = self.create_publisher(
+            Float64, '/model/robot1/joint/rear_left_prop_joint/cmd_thrust', 10)
+        self.pub_rear_right = self.create_publisher(
+            Float64, '/model/robot1/joint/rear_right_prop_joint/cmd_thrust', 10)
+        
+        # Subscribe to IMU data
+        self.imu_sub = self.create_subscription(
+            Imu,
+            '/imu/data',
+            self.imu_callback,
+            10)
+        
+        # Control parameters
+        self.BASE_THRUST = 12.0  # Base thrust to counteract gravity
+        self.start_time = time.time()
+        self.is_hovering = False
+        self.hover_duration = 5.0  # Hover for 5 seconds before starting circular motion
+        
+        # Create a timer for control loop
+        self.timer = self.create_timer(0.01, self.control_loop)  # 100Hz control loop
+        
+        self.get_logger().info('Drone controller initialized')
+        
+    def imu_callback(self, msg):
+        # Process IMU data if needed
+        # This could be used for stabilization in a more advanced controller
+        pass
+        
+    def control_loop(self):
+        current_time = time.time()
+        elapsed_time = current_time - self.start_time
+        
+        # Start with hovering for a few seconds
+        if elapsed_time < self.hover_duration:
+            if not self.is_hovering:
+                self.get_logger().info('Starting hover mode')
+                self.is_hovering = True
+            
+            # Equal thrust to all rotors for stable hover
+            self.set_all_thrusters(self.BASE_THRUST)
+            
+        else:
+            # After hover duration, start circular motion
+            if self.is_hovering:
+                self.get_logger().info('Starting circular motion')
+                self.is_hovering = False
+                
+            # Use sine/cosine to create circular thrust pattern
+            # Time-based sinusoidal variations for a circular pattern
+            circle_time = elapsed_time - self.hover_duration
+            amplitude = 3.0  # How much thrust variation for circular motion
+            frequency = 0.5  # How fast the circle is completed
+            
+            # Calculate thrust variations for circular pattern
+            # Front motors increase/decrease together, opposite from rear motors
+            # This creates a pitching motion
+            pitch_factor = amplitude * math.sin(frequency * circle_time)
+            
+            # Left and right motors vary opposite to each other
+            # This creates a rolling motion
+            roll_factor = amplitude * math.cos(frequency * circle_time)
+            
+            # Set individual thrusts to create circular motion
+            front_left_thrust = self.BASE_THRUST + pitch_factor + roll_factor
+            front_right_thrust = self.BASE_THRUST + pitch_factor - roll_factor
+            rear_left_thrust = self.BASE_THRUST - pitch_factor + roll_factor
+            rear_right_thrust = self.BASE_THRUST - pitch_factor - roll_factor
+            
+            # Apply calculated thrusts
+            self.set_thrusters(
+                front_left_thrust,
+                front_right_thrust,
+                rear_left_thrust,
+                rear_right_thrust
+            )
+    
+    def set_all_thrusters(self, thrust):
+        """Set all thrusters to the same thrust value"""
+        self.set_thrusters(thrust, thrust, thrust, thrust)
+    
+    def set_thrusters(self, front_left, front_right, rear_left, rear_right):
+        """Set individual thruster values"""
+        self.pub_front_left.publish(Float64(data=front_left))
+        self.pub_front_right.publish(Float64(data=front_right))
+        self.pub_rear_left.publish(Float64(data=rear_left))
+        self.pub_rear_right.publish(Float64(data=rear_right))
+        
+
+def main(args=None):
+    rclpy.init(args=args)
+    controller = DroneController()
+    rclpy.spin(controller)
+    controller.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

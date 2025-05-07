@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+import os
+import subprocess
+import threading
+import time
+
+# Path to the main launch file
+launch_cmd = ["ros2", "launch", "butterflybot", "launch.py"]
+
+# Path to the drone controller script
+drone_controller_script = os.path.expanduser("~/butterflybot_thrusters/src/butterflybot/butterflybot/drone_controller.py")
+
+def run_launch():
+    # Start the main ROS2 launch process
+    launch_process = subprocess.Popen(launch_cmd)
+    
+    # Give it time to start up
+    time.sleep(10)
+    
+    # Now directly run the drone controller
+    print("Starting drone controller script...")
+    controller_process = subprocess.Popen(["python3", drone_controller_script])
+    
+    try:
+        # Wait for both processes
+        launch_process.wait()
+        controller_process.wait()
+    except KeyboardInterrupt:
+        # Handle Ctrl+C gracefully
+        print("Shutting down...")
+        controller_process.terminate()
+        launch_process.terminate()
+
+if __name__ == "__main__":
+    run_launch()
