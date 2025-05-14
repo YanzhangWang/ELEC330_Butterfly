@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="butterfly">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.175328855296952 -0.00120000000000003 0.0954312607267515"
+        rpy="0 0 0" />
+      <mass
+        value="0.00711000000000002" />
+      <inertia
+        ixx="5.92549438647448E-06"
+        ixy="4.02478280245042E-23"
+        ixz="-1.69164464518841E-07"
+        iyy="5.93033250000002E-06"
+        iyz="1.55522997087424E-21"
+        izz="1.55031135255371E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://butterfly/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.776470588235294 0.819607843137255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://butterfly/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leftwing_Link">
+    <inertial>
+      <origin
+        xyz="0.00219938084441759 -0.00218657908716363 5.82532958814941E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00147107718311536" />
+      <inertia
+        ixx="4.89494439415532E-09"
+        ixy="-7.76406148903029E-10"
+        ixz="-5.11153261220452E-13"
+        iyy="1.81958240291303E-08"
+        iyz="-6.80643282485032E-15"
+        izz="1.79901156079066E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://butterfly/meshes/leftwing_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.776470588235294 0.819607843137255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://butterfly/meshes/leftwing_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftwing_joint"
+    type="revolute">
+    <origin
+      xyz="0.18533 -0.00093712 0.11476"
+      rpy="-1.6088 -0.14093 0.26448" />
+    <parent
+      link="base_link" />
+    <child
+      link="leftwing_Link" />
+    <axis
+      xyz="-0.33037 0.93969 0.088521" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rightwing_Link">
+    <inertial>
+      <origin
+        xyz="-0.00219937942048704 -0.00218657949638976 -7.85888171761506E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00147107670850053" />
+      <inertia
+        ixx="4.89494517058123E-09"
+        ixy="7.76404288607481E-10"
+        ixz="-6.13666079259511E-13"
+        iyy="1.8195822565493E-08"
+        iyz="1.23356069756839E-14"
+        izz="1.79900994939063E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://butterfly/meshes/rightwing_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.776470588235294 0.819607843137255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://butterfly/meshes/rightwing_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightwing_joint"
+    type="revolute">
+    <origin
+      xyz="0.16645 -0.00093712 0.1153"
+      rpy="-1.6241 0.19611 -0.26704" />
+    <parent
+      link="base_link" />
+    <child
+      link="rightwing_Link" />
+    <axis
+      xyz="0.33037 0.93969 0.088521" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
