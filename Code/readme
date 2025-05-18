@@ -3,9 +3,7 @@ Follow these instructions to launch the simulation:
 
 MAIN METHOD
 
-1. Download/pull the code from GitHub to your Linux PC's home directory. 
-
-e.g., "home/butterfly/" or "home/user/"
+1. Download/pull the code from GitHub to your Linux PC's home directory (e.g., "home/butterfly/" or "home/user/").
 
 2. Open a terminal and cd into the butterflybot file.
 
