@@ -1,0 +1,9 @@
+<library path="butterflybot">
+  <class name="MapSavePanel"
+         type="butterflybot.map_save_panel.MapSavePanel"
+         base_class_type="rviz_common::Panel">
+    <description>
+      A panel to save the current Cartographer map.
+    </description>
+  </class>
+</library>
