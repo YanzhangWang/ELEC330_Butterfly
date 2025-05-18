@@ -1,4 +1,4 @@
-Some files were too big to add to this GitHub Repository, as they were larger than 25 MB.
+Some files (screencasts) were too big to add to this GitHub Repository, as they were larger than 25 MB.
 
 As a work-around, a Google Drive Folder was setup to include the missing files and allow for quick playback:
 
