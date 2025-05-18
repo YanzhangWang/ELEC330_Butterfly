@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Butterflybot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0467837442624986 0.047668828289127 0.0302566124276802"
+        rpy="0 0 0" />
+      <mass
+        value="1.81343265737798" />
+      <inertia
+        ixx="0.0292434022065882"
+        ixy="2.37586868264859E-07"
+        ixz="-0.000122900162174771"
+        iyy="0.0378513449716505"
+        iyz="1.35402349531979E-06"
+        izz="0.00870843503669147" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_front_right">
+    <inertial>
+      <origin
+        xyz="1.10804414255039E-08 0.00308762205614733 -7.10785078572584E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.000971268794454539" />
+      <inertia
+        ixx="1.07688471081974E-06"
+        ixy="5.65245392107505E-14"
+        ixz="1.93023878397352E-07"
+        iyy="1.11858331140503E-06"
+        iyz="-5.1246892916307E-14"
+        izz="4.37913671202436E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_right"
+    type="continuous">
+    <origin
+      xyz="0.17137 0.062746 0.059461"
+      rpy="1.5708 0 -0.27448" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_front_right" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="link_front_left">
+    <inertial>
+      <origin
+        xyz="-1.31586659068983E-08 0.00308762046198192 3.28965871140841E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00097127102853952" />
+      <inertia
+        ixx="1.07688958372964E-06"
+        ixy="3.83280991701229E-14"
+        ixz="1.93025014716664E-07"
+        iyy="1.11858845766203E-06"
+        iyz="2.18108405894349E-14"
+        izz="4.3791642931003E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_front_left"
+    type="continuous">
+    <origin
+      xyz="-0.07919 0.062069 0.05843"
+      rpy="1.5708 0 -0.27448" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_front_left" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="link_rear_left">
+    <inertial>
+      <origin
+        xyz="-1.31590261395753E-08 0.00308762365033689 3.28989010478509E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.000971266560532815" />
+      <inertia
+        ixx="1.07687983819276E-06"
+        ixy="3.83281258085116E-14"
+        ixz="1.93022742108294E-07"
+        iyy="1.11857816543404E-06"
+        iyz="2.18111830960771E-14"
+        izz="4.37910913125342E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_rear_left"
+    type="continuous">
+    <origin
+      xyz="-0.080468 -0.19675 0.054993"
+      rpy="1.5708 0 -0.27448" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_rear_left" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="link_rear_right">
+    <inertial>
+      <origin
+        xyz="1.10804364572559E-08 0.00308762205614392 -7.10777043610999E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.000971268794645165" />
+      <inertia
+        ixx="1.07688471115815E-06"
+        ixy="5.65245370611387E-14"
+        ixz="1.93023878437882E-07"
+        iyy="1.11858331174827E-06"
+        iyz="-5.12475536974343E-14"
+        izz="4.37913671250214E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_rear_right"
+    type="continuous">
+    <origin
+      xyz="0.17607 -0.19605 0.05153"
+      rpy="1.5708 0 -0.27448" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_rear_right" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>

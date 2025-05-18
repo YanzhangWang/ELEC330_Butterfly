@@ -1,0 +1,355 @@
+<?xml version="1.0" ?>
+<sdf version='1.11'>
+  <model name='Butterflybot'>
+    <frame name="lidar_frame" attached_to='base_link'>
+          <pose>0 0 0 0 0 -1.57</pose>
+    </frame>
+
+    <frame name="camera_frame" attached_to='base_link'>
+          <pose>0 0 0 0 0 -1.57</pose>
+    </frame>
+
+    <link name='base_link'>
+      <inertial>
+        <pose>0.046783744262498601 0.047668828289126997 0.030256612427680199 0 0 0</pose>
+        <mass>0</mass>
+        <inertia>
+          <ixx>0.0292434022065882</ixx>
+          <ixy>2.3758686826485899e-07</ixy>
+          <ixz>-0.00012290016217477099</ixz>
+          <iyy>0.037851344971650498</iyy>
+          <iyz>1.35402349531979e-06</iyz>
+          <izz>0.0087084350366914698</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990196109 1 1 1</diffuse>
+          <ambient>0.990196109 1 1 1</ambient>
+        </material>
+      </visual>
+
+      <sensor name='gpu_lidar' type='gpu_lidar'>"
+          <pose relative_to='lidar_frame'>0 0 0 0 0 0</pose>
+          <topic>lidar_scan</topic>
+          <update_rate>10</update_rate>
+          <ray>
+              <scan>
+                  <horizontal>
+                      <samples>640</samples>
+                      <resolution>1</resolution>
+                      <min_angle>-1.396263</min_angle>
+                      <max_angle>1.396263</max_angle>
+                  </horizontal>
+                  <vertical>
+                      <samples>1</samples>
+                      <resolution>0.01</resolution>
+                      <min_angle>0</min_angle>
+                      <max_angle>0</max_angle>
+                  </vertical>
+              </scan>
+              <range>
+                  <min>0.08</min>
+                  <max>10.0</max>
+                  <resolution>0.01</resolution>
+              </range>
+          </ray>
+          <always_on>1</always_on>
+          <visualize>true</visualize>
+      </sensor>
+      <sensor name="boundingbox_camera" type="boundingbox_camera">
+         <pose relative_to='camera_frame'>0 0 0.5 0 0 3.14</pose>
+         <topic>boxes</topic>
+         <camera>
+           <box_type>2d</box_type>
+           <horizontal_fov>1.047</horizontal_fov>
+           <image>
+             <width>800</width>
+             <height>600</height>
+           </image>
+           <clip>
+             <near>0.1</near>
+             <far>10</far>
+           </clip>
+         </camera>
+         <always_on>1</always_on>
+         <update_rate>10</update_rate>
+         <visualize>true</visualize>
+       </sensor>
+       <sensor name="imu_sensor" type="imu">
+          <pose>0 0 0 0 0 0</pose>
+          <update_rate>100</update_rate>
+          <imu>
+            <linear_acceleration>
+              <x>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </x>
+              <y>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </y>
+              <z>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </z>
+            </linear_acceleration>
+            <angular_velocity>
+              <x>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </x>
+              <y>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </y>
+              <z>
+                <noise type="gaussian">
+                  <mean>0.0</mean>
+                  <stddev>0.01</stddev>
+                </noise>
+              </z>
+            </angular_velocity>
+          </imu>
+        </sensor>
+    </link>
+    <joint name='joint_front_left' type='revolute'>
+      <pose relative_to='base_link'>-0.079189999999999997 0.062068999999999999 0.058430000000000003 1.5708 0 -0.27447999999999984</pose>
+      <parent>base_link</parent>
+      <child>link_front_left</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link_front_left'>
+      <pose relative_to='joint_front_left'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-1.3158665906898301e-08 0.0030876204619819199 3.2896587114084099e-08 0 0 0</pose>
+        <mass>0.00097127102853952004</mass>
+        <inertia>
+          <ixx>1.0768895837296399e-06</ixx>
+          <ixy>3.8328099170122897e-14</ixy>
+          <ixz>1.9302501471666401e-07</ixz>
+          <iyy>1.1185884576620301e-06</iyy>
+          <iyz>2.18108405894349e-14</iyz>
+          <izz>4.3791642931003e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_front_left_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_left.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link_front_left_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_left.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.372549027 0.372549027 0.372549027 1</diffuse>
+          <ambient>0.372549027 0.372549027 0.372549027 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint_front_right' type='revolute'>
+      <pose relative_to='base_link'>0.17136999999999999 0.062745999999999996 0.059461 1.5708 0 -0.27447999999999984</pose>
+      <parent>base_link</parent>
+      <child>link_front_right</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link_front_right'>
+      <pose relative_to='joint_front_right'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>1.10804414255039e-08 0.0030876220561473302 -7.1078507857258404e-08 0 0 0</pose>
+        <mass>0.000971268794454539</mass>
+        <inertia>
+          <ixx>1.0768847108197401e-06</ixx>
+          <ixy>5.65245392107505e-14</ixy>
+          <ixz>1.93023878397352e-07</ixz>
+          <iyy>1.1185833114050301e-06</iyy>
+          <iyz>-5.1246892916307002e-14</iyz>
+          <izz>4.3791367120243599e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_front_right_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_right.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link_front_right_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_front_right.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.372549027 0.372549027 0.372549027 1</diffuse>
+          <ambient>0.372549027 0.372549027 0.372549027 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint_rear_left' type='revolute'>
+      <pose relative_to='base_link'>-0.080467999999999998 -0.19675000000000001 0.054993 1.5708 0 -0.27447999999999984</pose>
+      <parent>base_link</parent>
+      <child>link_rear_left</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link_rear_left'>
+      <pose relative_to='joint_rear_left'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-1.3159026139575301e-08 0.0030876236503368901 3.2898901047850897e-08 0 0 0</pose>
+        <mass>0.00097127102853952004</mass>
+        <inertia>
+          <ixx>1.0768798381927601e-06</ixx>
+          <ixy>3.8328125808511603e-14</ixy>
+          <ixz>1.9302274210829399e-07</ixz>
+          <iyy>1.1185781654340401e-06</iyy>
+          <iyz>2.1811183096077101e-14</iyz>
+          <izz>4.3791091312534198e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_rear_left_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_left.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link_rear_left_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_left.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.372549027 0.372549027 0.372549027 1</diffuse>
+          <ambient>0.372549027 0.372549027 0.372549027 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='joint_rear_right' type='revolute'>
+      <pose relative_to='base_link'>0.17607 -0.19605 0.051529999999999999 1.5708 0 -0.27447999999999984</pose>
+      <parent>base_link</parent>
+      <child>link_rear_right</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='link_rear_right'>
+      <pose relative_to='joint_rear_right'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>1.1080436457255899e-08 0.0030876220561439202 -7.1077704361099894e-08 0 0 0</pose>
+        <mass>0.000971268794454539</mass>
+        <inertia>
+          <ixx>1.0768847111581501e-06</ixx>
+          <ixy>5.6524537061138701e-14</ixy>
+          <ixz>1.93023878437882e-07</ixz>
+          <iyy>1.1185833117482701e-06</iyy>
+          <iyz>-5.1247553697434301e-14</iyz>
+          <izz>4.3791367125021401e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='link_rear_right_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_right.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='link_rear_right_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/butterfly/butterflybot/src/butterflybot/meshes/link_rear_right.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.372549027 0.372549027 0.372549027 1</diffuse>
+          <ambient>0.372549027 0.372549027 0.372549027 1</ambient>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
