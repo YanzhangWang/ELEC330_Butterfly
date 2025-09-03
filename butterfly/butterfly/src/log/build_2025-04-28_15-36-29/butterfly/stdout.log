@@ -1,0 +1,97 @@
+running egg_info
+creating build/butterfly/butterfly.egg-info
+writing build/butterfly/butterfly.egg-info/PKG-INFO
+writing dependency_links to build/butterfly/butterfly.egg-info/dependency_links.txt
+writing entry points to build/butterfly/butterfly.egg-info/entry_points.txt
+writing requirements to build/butterfly/butterfly.egg-info/requires.txt
+writing top-level names to build/butterfly/butterfly.egg-info/top_level.txt
+writing manifest file 'build/butterfly/butterfly.egg-info/SOURCES.txt'
+reading manifest file 'build/butterfly/butterfly.egg-info/SOURCES.txt'
+writing manifest file 'build/butterfly/butterfly.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/butterfly/butterfly/src/build/butterfly/build
+creating /home/butterfly/butterfly/src/build/butterfly/build/lib
+creating /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+copying butterfly/transform_broadcaster.py -> /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+copying butterfly/__init__.py -> /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+copying butterfly/joint_controller.py -> /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly
+running install
+running install_lib
+creating /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+copying /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly/transform_broadcaster.py -> /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+copying /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly/__init__.py -> /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+copying /home/butterfly/butterfly/src/build/butterfly/build/lib/butterfly/joint_controller.py -> /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly
+byte-compiling /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly/transform_broadcaster.py to transform_broadcaster.cpython-312.pyc
+byte-compiling /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly/joint_controller.py to joint_controller.cpython-312.pyc
+running install_data
+creating /home/butterfly/butterfly/src/install/butterfly/share/ament_index
+creating /home/butterfly/butterfly/src/install/butterfly/share/ament_index/resource_index
+creating /home/butterfly/butterfly/src/install/butterfly/share/ament_index/resource_index/packages
+copying resource/butterfly -> /home/butterfly/butterfly/src/install/butterfly/share/ament_index/resource_index/packages
+copying package.xml -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly
+copying launch/launch.py -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly
+creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf
+copying urdf/env_ws.sdf -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf/
+copying urdf/butterfly.urdf -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf/
+copying urdf/butterfly.sdf -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/urdf/
+creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/rviz
+copying rviz/butterfly.rviz -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/rviz/
+creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes
+creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision
+copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Propeller Ring for Qdrone.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/wing.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - 5X4.7 CL-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quaddrone Arm.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Quad drone Main bracket - CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Propeller Ring for Qdrone-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - wing-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/wing.SLDPRT -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Quad drone Main bracket - CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - wing-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/5X4.7 CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Main bracket - CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+copying meshes/collision/Quad drone Assemb(revised) - Quaddrone Arm-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/collision/
+creating /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual
+copying meshes/visual/Rock_vertical_1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/PineTree.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Propeller Ring for Qdrone.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Rock_horizontal_1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/wing.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - 5X4.7 CL-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quaddrone Arm.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Quad drone Main bracket - CL-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Propeller Ring for Qdrone-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - wing-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/wing.SLDPRT -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Quad drone Main bracket - CL-1.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - wing-4.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-2.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/5X4.7 CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Arch.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Main bracket - CL.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+copying meshes/visual/Quad drone Assemb(revised) - Quaddrone Arm-3.STL -> /home/butterfly/butterfly/src/install/butterfly/share/butterfly/meshes/visual/
+running install_egg_info
+Copying build/butterfly/butterfly.egg-info to /home/butterfly/butterfly/src/install/butterfly/lib/python3.12/site-packages/butterfly-0.0.0-py3.12.egg-info
+running install_scripts
+Installing joint_controller script to /home/butterfly/butterfly/src/install/butterfly/lib/butterfly
+Installing transform_broadcaster script to /home/butterfly/butterfly/src/install/butterfly/lib/butterfly
+writing list of installed files to '/home/butterfly/butterfly/src/build/butterfly/install.log'

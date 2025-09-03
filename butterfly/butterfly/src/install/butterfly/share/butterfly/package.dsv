@@ -1,0 +1,6 @@
+source;share/butterfly/hook/pythonpath.ps1
+source;share/butterfly/hook/pythonpath.dsv
+source;share/butterfly/hook/pythonpath.sh
+source;share/butterfly/hook/ament_prefix_path.ps1
+source;share/butterfly/hook/ament_prefix_path.dsv
+source;share/butterfly/hook/ament_prefix_path.sh

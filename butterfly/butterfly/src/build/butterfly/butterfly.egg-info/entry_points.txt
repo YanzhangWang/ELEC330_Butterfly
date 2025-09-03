@@ -1,0 +1,3 @@
+[console_scripts]
+joint_controller = butterfly.joint_controller:main
+transform_broadcaster = butterfly.transform_broadcaster:main

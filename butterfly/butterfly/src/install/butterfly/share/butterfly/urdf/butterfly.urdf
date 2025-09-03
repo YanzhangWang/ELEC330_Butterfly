@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="butterfly">
+<link name="base_footprint">
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+</link>
+
+<joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0.001" rpy="0 0 0" />
+    <parent link="base_footprint"/>
+    <child link="base_link" />
+</joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-6.9885731202049E-05 -0.00416139324316582 -0.00869330215629166"
+        rpy="0 0 0" />
+      <mass
+        value="0.0597211231742216" />
+      <inertia
+        ixx="8.75969708228123E-06"
+        ixy="4.52866635883372E-09"
+        ixz="6.08505015303817E-10"
+        iyy="1.34837706447811E-06"
+        iyz="-2.27118460944342E-08"
+        izz="7.78827401439364E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/visual/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.133322334 0.5553333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/visual/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Right_Link">
+    <inertial>
+      <origin
+        xyz="-0.055723 0.024002 0.00028555"
+        rpy="0 0 0" />
+      <mass
+        value="0.035164" />
+      <inertia
+        ixx="4.3042E-05"
+        ixy="-1.2425E-05"
+        ixz="-1.1392E-11"
+        iyy="4.237E-05"
+        iyz="6.8486E-11"
+        izz="8.5395E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/visual/Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.177772 0.1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/visual/Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0096274 -0.018692 -0.0014"
+      rpy="0 0 0.17453" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34907"
+      upper="0.34907"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Left_Link">
+    <inertial>
+      <origin
+        xyz="0.055735 0.023991 0.00028658"
+        rpy="0 0 0" />
+      <mass
+        value="0.035047" />
+      <inertia
+        ixx="4.2873E-05"
+        ixy="1.2372E-05"
+        ixz="-6.6978E-11"
+        iyy="4.2225E-05"
+        iyz="2.653E-11"
+        izz="8.5081E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/visual/Left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.51 0.22 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://meshes/visual/Left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_joint"
+    type="revolute">
+    <origin
+      xyz="0.0096274 -0.018692 -0.0014"
+      rpy="0 0 -0.17453" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.34907"
+      upper="0.34907"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
